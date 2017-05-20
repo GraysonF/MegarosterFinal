@@ -180,19 +180,20 @@ class Megaroster {
 
      if (child.contentEditable === 'inherit' || child.contentEditable === 'false') {
        child.contentEditable = 'true';
+       //child.innerHTML.style.color = 'red'
      } else {
        child.contentEditable = 'false'
      }
-     console.log(child)
+     //console.log(child)
 
      const index = this.students.findIndex((currentStudent, i) => {
       
       return currentStudent.id === student.id
     })
     
-    console.log(this.students[index].name)
+    //console.log(this.students[index].name)
 
-    console.log(child.textContent)
+    //console.log(child.textContent)
     this.students[index].name = child.textContent;
 
     this.save()
